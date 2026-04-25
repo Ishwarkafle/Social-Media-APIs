@@ -11,3 +11,7 @@ print(df.loc["Bulbasaur", ["Type1", "Type2"]])
 print(df.loc["Bulbasaur":"Charizard", ["Type1", "Type2"]])
 
 print(df.iloc[0:21:2,0:3])
+
+df["Combined Types"] = df["Type1"] + " " + df["Type2"]
+print(df[["Type1", "Type2", "Combined Types"]])
+
