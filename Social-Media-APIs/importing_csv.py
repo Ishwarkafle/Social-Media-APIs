@@ -15,3 +15,9 @@ print(df.iloc[0:21:2,0:3])
 df["Combined Types"] = df["Type1"] + " " + df["Type2"]
 print(df[["Type1", "Type2", "Combined Types"]])
 
+
+pokemon=input("Enter the name of a pokemon: ")
+try:
+    print(df.loc[pokemon])
+except KeyError:
+    print(f"That {pokemon} does not exist in the dataset")     
